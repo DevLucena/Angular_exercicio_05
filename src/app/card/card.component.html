@@ -1,0 +1,59 @@
+<mat-card class="principal">
+
+    <mat-card-title>ToDo App</mat-card-title>
+    <mat-card-subtitle>Lista de Atividades</mat-card-subtitle>
+
+        <mat-form-field>
+
+            <mat-label >Adicione uma Atividade</mat-label>
+            <input class="input" 
+            matInput 
+            placeholder="Fazer Caminhada" 
+            value="Fazer Caminhada" 
+            #addElement 
+            (keyup.enter)="add(addElement.value)">
+
+        </mat-form-field>
+
+        <button  mat-icon-button (click)="add(addElement.value)" btn>
+
+            <mat-icon>add</mat-icon>
+
+        </button>
+
+    <mat-card-content>
+
+        <mat-list>
+
+            <mat-list-item 
+            color="primary" 
+            *ngFor="let element of lista, 
+            let idx = index">{{element}}
+           
+            <button (click)="removeE(element)" 
+            mat-icon-button>
+                <mat-icon>delete</mat-icon>
+            </button>
+            </mat-list-item>
+
+        </mat-list>
+
+    </mat-card-content>
+
+    <mat-card-footer>
+
+        <mat-card-actions class="footer">
+
+            <p>Você tem {{ lista.length }} atividades pendentes </p>
+            <button 
+            (click)="removeAll()" 
+            mat-raised-button 
+            color="primary" > Apagar Tudo
+                
+            </button>
+
+        </mat-card-actions>
+
+    </mat-card-footer>
+
+</mat-card>

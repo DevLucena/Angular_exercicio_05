@@ -1,0 +1,51 @@
+.principal{
+    width: 500px;
+    height: fit-content;
+    text-align: center;
+    background-color: rgb(166, 191, 246);
+    display: block;
+}
+
+mat-card-title{
+    font-size: 35px;
+}
+
+mat-form-field{
+    height:60px;
+    width: 300px;
+    
+}
+
+.input{
+    height:50px;
+    width: 300px;
+}
+
+button{
+    margin-left: 35px;
+}
+
+mat-list-item{
+    height:60px;
+    width: fit-content;
+    margin-left: 150px;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:row; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
